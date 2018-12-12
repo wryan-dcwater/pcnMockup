@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "PNC Control Application";
+}
+
+
+<h3>@ViewBag.Message</h3>
+
+<h3 style="color:green">Status: Sending Active</h3>
+<p>If Status Active - Actively making calls, stop until the time below</p>
+<p>
+    Enter Restart Date &amp; Time <input id="datetime" />
+</p>
+<hr />
+<hr />
+
+<h3 style="color:red">Status: Sending In-Active</h3>
+<p>If Status In-Active - resume making calls</p>
+<p>
+    <input type="button" value="Restart IVR Calls" />
+</p>
+
+
+<script>
+    $("#datetime").datetimepicker({
+        // minDate: new Date()
+        minDate: 0
+    });
+</script>
